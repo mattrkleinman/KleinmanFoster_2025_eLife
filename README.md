@@ -1,7 +1,7 @@
 # KleinmanFoster_2025_eLife
 Data set for Kleinman and Foster, 2025, "Spatial localization of hippocampal replay requires dopamine signaling"
 
-Each main directory indicates the experimental group (Exp for experimental and Con for control) and subject ID (1-4 for Exp, 1-3 for Con). Within each subject directory are session directories, labeled by the date and session of the day. For example, "Con_1\20210601_run2" is the 2nd session recorded on 2021/06/01 for control subject 1).
+"data_files.zip" includes the experimental data. Each main directory indicates the experimental group (Exp for experimental and Con for control) and subject ID (1-4 for Exp, 1-3 for Con). Within each subject directory are session directories, labeled by the date and session of the day. For example, "Con_1\20210601_run2" is the 2nd session recorded on 2021/06/01 for control subject 1).
 
 Each session directory includes up to 4 files. Sessions that only recorded local field potentials for sharp-wave ripple analyses include "session_info.mat" and "ripple_events.mat". Sessions that also recorded spiking of individual neurons additionally include "spike_data.mat" and "sdes.mat". The descriptions of each file are below:
 

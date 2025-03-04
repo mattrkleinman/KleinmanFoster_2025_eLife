@@ -1,7 +1,7 @@
 # KleinmanFoster_2025_eLife
 Data set for Kleinman and Foster, 2025, "Spatial localization of hippocampal replay requires dopamine signaling"
 
-The top level directories correspond to data from Experiment 1.
+The top level individual directories correspond to data from Experiment 1.
 
 Each main directory indicates the experimental group (Exp for experimental and Con for control) and subject ID (1-4 for Exp, 1-3 for Con). Within each subject directory are session directories, labeled by the date and session of the day. For example, "Con_1\20210601_run2" is the 2nd session recorded on 2021/06/01 for control subject 1).
 
@@ -15,9 +15,14 @@ session_info: a structure containing session information and behavioral data. Fi
   5) epoch_change: each row indicates the transition between epochs, indexed to the time of that entry in the velocity field, with the first value indicating the end of epoch n and the 2nd value the beginning of epoch n+1; e.g., [12650,12651; 25160,25161] indicates a transition from Epoch 1 to Epoch 2 at time velocity(12650,1), and a transition from Epoch 2 to Epoch 3 at time velocity(25160,1)
   6) left_visit: each row is a single visit to the "left" reward end, with the first value being the entrance, when position first was below reward_ends(1), and the second value being the exit, when position was last below reward_ends(2)
   7) right_visit: same as left_visit, but for the other reward end
+  8) drug: 0 = saline, 1 = CNO
+  9) novel: 0 = familiar, 1 = novel
 
 ripple_events: an n by 4 array, with each row corresponding to the nth ripple that passed detection criteria, and the columns corresponding to (1) the time of ripple onset, (2) the time of ripple offset, (3) the time of peak ripple power, and (4) the position at ripple onset
 
 sdes: an n by 4 array, identical to ripple_events but for spike density events that passed detection criteria
 
 spike_data: an n by 3 array, with each row corresponding to the nth detected spike, and the columns corresponding to (1) the time of the spike, (2) the cluster ID of the spike, and (3) the tetrode ID of the spike
+
+
+The top level directory "Experiment2" includes similarly formatted data from Experiment 2 in the paper. Session_info.mat has an additional field, reward_schedule, with each row corresponding to reward volumes (in tenths of an ml, i.e. "8" = 0.8 ml) delivered on each lap, and the two columns corresponding to the volume delivered at the "left"/low position end of the track and the "right"/high position end of the track.

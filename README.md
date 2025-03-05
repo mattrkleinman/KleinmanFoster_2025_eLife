@@ -3,7 +3,7 @@ Data set for Kleinman and Foster, 2025, "Spatial localization of hippocampal rep
 
 The top level individual directories correspond to data from Experiment 1 or Experiment 2.
 
-Within the Experiment 1 directory, each folder corresponds to a single subject, and indicates the experimental group (Exp for experimental and Con for control) and subject ID (1-4 for Exp, 1-3 for Con). Within each subject directory are session directories, labeled by the date and session of the day. For example, "Con_1\20210601_run2" is the 2nd session recorded on 2021/06/01 for control subject 1.
+Within the "Experiment_1" directory, each folder corresponds to a single subject, and indicates the experimental group (Exp for experimental and Con for control) and subject ID (1-4 for Exp, 1-3 for Con). Within each subject directory are session directories, labeled by the date and session of the day. For example, "Con_1\20210601_run2" is the 2nd session recorded on 2021/06/01 for control subject 1.
 
 Each session directory includes up to 4 files. Sessions that only recorded local field potentials for sharp-wave ripple analyses include "session_info.mat" and "ripple_events.mat". Sessions that also recorded spiking of individual neurons additionally include "spike_data.mat" and "sdes.mat". The descriptions of each file are below:
 
@@ -25,4 +25,4 @@ sdes: an n by 4 array, identical to ripple_events but for spike density events t
 spike_data: an n by 3 array, with each row corresponding to the nth detected spike, and the columns corresponding to (1) the time of the spike, (2) the cluster ID of the spike, and (3) the tetrode ID of the spike
 
 
-The top level directory "Experiment2" includes similarly formatted data from Experiment 2 in the paper. Session_info.mat has an additional field, reward_schedule, with each row corresponding to reward volumes (in tenths of an ml, i.e. "8" = 0.8 ml) delivered on each lap, and the two columns corresponding to the volume delivered at the "left"/low position end of the track and the "right"/high position end of the track.
+The top level directory "Experiment_2" includes similarly formatted data from Experiment 2 in the paper. Session_info.mat has an additional field, reward_schedule, with each row corresponding to reward volumes (in tenths of an ml, i.e. "8" = 0.8 ml) delivered on each lap, and the two columns corresponding to the volume delivered at the "left"/low position end of the track and the "right"/high position end of the track.
